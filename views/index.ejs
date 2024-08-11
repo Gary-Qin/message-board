@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Board</title>
+  </head>
+  <body>
+    <h1>Message Board</h1>
+    <a href="/new"><span>New Message</span></a>
+    <% messages.forEach((message) => { %> <%- include("../messages/message",
+    {text: message.text, user: message.user, added: message.added}); %> <% });
+    %>
+  </body>
+</html>
