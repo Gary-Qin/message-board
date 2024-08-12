@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const path = require("node:path");
@@ -12,7 +14,7 @@ app.set("view engine", "ejs");
 app.use("/", indexRouter);
 app.use("/new", messageRouter);
 
-const HOST = 4000;
-app.listen(HOST, () => {
-  console.log(`server running on port ${HOST}`);
+const host = process.env.PORT || 3000;
+app.listen(host, () => {
+  console.log(`server running on port ${host}`);
 });
