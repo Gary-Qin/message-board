@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 app.use("/", indexRouter);
 app.use("/new", messageRouter);
 
-const HOST = 6969;
+const HOST = 4000;
 app.listen(HOST, () => {
   console.log(`server running on port ${HOST}`);
 });
